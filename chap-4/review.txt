@@ -1,0 +1,125 @@
+1. What is a computation?
+  Act of producing outputs based on some inputs
+
+2. What do we mean by inputs and outputs to a computation? Give
+examples
+  Inputs are the values provided by the user to the program through means like keyboard,
+  mice, IR sensors etc. Output is the final result after computing the inputs.
+  Eg: A square root program can accept integer like 64 and return output 8 after computation
+
+3. What are the three requirements a programmer should keep in mind
+when expressing computations
+  Correctly, simply, efficiently
+
+4. What does an expression do?
+  Computes value from number of operands
+
+5. What is the difference between a statement and an expression, as
+described in this chapter?
+  An expression computes values from number of operands.
+  A set of instructions performing an action is a statement.
+
+6. What is an lvalue? List the operators that require an lvalue. Why do
+these operators, and not the others, require an lvalue?
+  Value appearing on left side of assignment where operator modifies operand.
+  - Pre/post increment, pre/post decrement, assignment, compound assignment
+  They are modifying the value of the expression
+
+7. What is a constant expression?
+  An expression exclusively consisting of constants
+
+8. What is a literal?
+  An expression with distinct value
+
+9. What is a symbolic constant and why do we use them?
+  A named object who's value cannot be altered after initialization
+  Used for values which shouldnt change during compile time. 
+  Eg: Value of PI must not change after initializing as 3.14159 or 3.14
+
+10. What is a magic constant? Give examples.
+  Non obvious literals used outside of symbolic constants.
+  Eg: 
+    double energy = f * 6.62607015 * 1 / pow(10, 34); // X
+    int energy = f * PLANCK_CONSTANT; // ✓
+
+11. What are some operators that we can use for integers and floatingpoint values?
+  Arithmetic: Increment, Decrement, Add, Subtract, Multiply, Divide
+  IO: Write value to ostream <<, Read value from istream >>
+  Logical Operations: > < >= <= == != && |
+  Assignments: =    *= -= += %= 
+  Only Integers: Modulus
+
+12. What operators can be used on integers but not on floating-point
+numbers?
+  Modulus (%) operator
+
+13. What are some operators that can be used for strings?
+  Operations: Concat(+)
+  Logical: == !=
+  IO: >> , <<
+  Assignment: = +=
+  
+14. When would a programmer prefer a switch-statement to an ifstatement?
+  When Comparing against several constants
+
+15. What are some common problems with switch-statements?
+  > Using variables in switch instead of constants
+  > Forgetting break after case
+
+16. What is the function of each part of the header line in a for-loop, and
+in what sequence are they executed?
+  for(int i = 0; i < 100; i++) {
+  i. initialize variable for iterating over loop
+  ii. Loop until condition remains true - Until i reaches 100
+  iii. Increment i at each iteration
+    Note to self:
+    (++pre - value is incremented then used
+    post++ - value is used then incremented)
+
+17. When should the for-loop be used and when should the while-loop
+be used?
+  For loop: Use of initializer, condition and increment/decrement operation
+  While: Independent of initializer and inc/dec operation
+
+18. How do you print the numeric value of a char?
+  Casting to type int;
+  int my_int = char_value; OR cout << int(char_value)
+
+19. Describe what the line char foo(int x) means in a function definition
+  Define function named foo accepting one parameter x as integer and returning a char value
+
+20. When should you define a separate function for part of a program?
+List reasons.
+  - Makes computation logically seperate
+  - Makes program clearer
+  - Allows reusability without rewriting entire logic
+  - Eases testing and debugging
+
+21. What can you do to an int that you cannot do to a string?
+  - / % *
+
+22. What can you do to a string that you cannot do to an int?
+  Concatenation 
+  
+23. What is the index of the third element of a vector?
+  2
+
+24. How do you write a for-loop that prints every element of a vector?
+  for(type x : vec) cout << x;
+
+25. What does vector<char> alphabet(26); do?
+  Initializes vector with 26 empty char values
+
+26. Describe what push_back() does to a vector.
+  Adds element to end of vector
+
+27. What do vector’s member functions begin(), end(), and size() do?
+  begin(): Return pointer pointing to first el of vector
+  end(): Return pointer pointing to last el of vector
+  size(): Return no. of elements in vector
+
+28. What makes vector so popular/useful?
+  Store, manipulate and use series of values
+
+29. How do you sort the elements of a vector?
+  sort(v.begin(), v.end())
