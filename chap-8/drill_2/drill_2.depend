@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1617088503 source:c:\users\sanja\onedrive\pictures\ppucpp solutions\chap-8\drill_2\main.cpp
+	<iostream>
+	"header.h"
+
+1617088248 c:\users\sanja\onedrive\pictures\ppucpp solutions\chap-8\drill_2\header.h
+
+1617088518 source:c:\users\sanja\onedrive\pictures\ppucpp solutions\chap-8\drill_2\swaps.cpp
+	<iostream>
+	"header.h"
+

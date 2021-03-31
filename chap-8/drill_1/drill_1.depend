@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1584205420 source:c:\users\sanja\onedrive\pictures\ppucpp solutions\chap-8\drill_1\main.cpp
+	<iostream>
+
+1617086651 source:c:\users\sanja\onedrive\pictures\ppucpp solutions\chap-8\drill_1\use.cpp
+	"my.h"
+
+1617086550 c:\users\sanja\onedrive\pictures\ppucpp solutions\chap-8\drill_1\my.h
+
+1617086433 source:c:\users\sanja\onedrive\pictures\ppucpp solutions\chap-8\drill_1\my.cpp
+	<iostream>
+	"my.h"
+
