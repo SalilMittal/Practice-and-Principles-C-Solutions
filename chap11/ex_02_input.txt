@@ -1,0 +1,48 @@
+22.1.2.1 What we want
+Typically, we want
+
+• Correctness: Yes, it can be difficult to define what we mean by
+“correct,” but doing so is an important part of the complete job. Often,
+others define for us what is correct for a given project, but then we
+have to interpret what they say.
+
+• Maintainability: Every successful program will be changed over time;
+it will be ported to new hardware and software platforms, it will be
+extended with new facilities, and new bugs will be found that must be
+fixed. The sections below about ideals for program structure address
+this ideal.
+
+• Performance: Performance (“efficiency”) is a relative term.
+Performance has to be adequate for the program’s purpose. It is often
+claimed that efficient code is necessarily low-level and that concerns
+with a good, high-level structure of the code cause inefficiency. On the
+contrary, we find that acceptable performance is often achieved
+through adherence to the ideals and approaches we recommend. The
+STL is an example of code that is simultaneously abstract and very
+efficient. Poor performance can as easily arise from an obsession with
+low-level details as it can from disdain for such details.
+
+• On-time delivery: Delivering the perfect program a year late is usually
+not good enough. Obviously, people expect the impossible, but we
+need to deliver quality software in a reasonable time. There is a myth
+that “completed on time” implies shoddiness. On the contrary, we find
+that emphasis on good structure (e.g., resource management,
+invariants, and interface design), design for testability, and use of
+appropriate libraries (often designed for a specific application or
+application area) is a good way to meet deadlines.
+
+This leads to a concern for structure in our code:
+
+• If there is a bug in a program (and every large program has bugs), it is
+easier to find in a program with a clear structure.
+
+• If a program needs to be understood by a new person or needs to be
+modified in some way, a clear structure is comprehensible with far less
+effort than a mess of low-level details.
+
+• If a program hits a performance problem, it is often easier to tune a
+high-level program (one that is a good approximation of the ideals and
+has a well-defined structure) than a low-level or messy one. For
+starters, the high-level one is more likely to be understandable.
+Second, the high-level one is often ready for testing and tuning long
+before the low-level one.

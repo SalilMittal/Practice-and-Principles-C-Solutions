@@ -1,0 +1,30 @@
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <string>
+
+template<class T> char* as_bytes(T& i)	// needed for binary I/O
+{
+	void* addr = &i;	// get the address of the first byte
+	// of memory used to store the object
+	return static_cast<char*>(addr); // treat that memory as bytes
+}
+
+int main() {
+    std::ifstream ifs {"read_binary.txt", std::ios_base::binary};
+    std::ofstream ofs {"write_binary.txt", std::ios_base::binary};
+
+    std::vector<int> v;
+
+    for(int x; ifs.read(as_bytes(x), sizeof(int));) {
+        std::cout << as_bytes(x);
+        v.push_back(x);
+    }
+
+    for(int& i : v) ++i;
+
+    /**
+     * Writes as same format not character sequence
+     */
+    for(int i : v) ofs.write(as_bytes(i), sizeof(int));
+}

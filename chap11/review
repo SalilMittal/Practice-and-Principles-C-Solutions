@@ -1,0 +1,76 @@
+1. Why is I/O tricky for a programmer?
+    - Variety of input and output sources
+    - Output must be clear
+    - Inputting is error-prone [disk read error, file location, format]
+    - UTF 8 and other encoding schemes
+
+2. What does the notation << hex do?
+    Enables manipulator hex for cout. All numbers
+    printed will be in hexadecimal form
+
+3. What are hexadecimal numbers used for in computer science? Why?
+    Outputting Hardware related information
+    Fixed digit and size relation
+    - Used as one digit gives exactly a 4 bit value
+    - 2 digits => 1 byte
+
+4. Name some of the options you may want to implement for formatting
+integer output
+    hex
+    oct
+    fixed
+    scientific
+    showbase / noshowbase
+
+5. What is a manipulator?
+    Terms used to change behaviour of a stream
+
+6. What is the prefix for decimal? For octal? For hexadecimal?
+    decimal: ''
+    octal: '0'
+    hexadecimal: '0x'
+
+7. What is the default output format for floating-point values?
+    defaultfloat - chooses between scientific and fixed notation
+
+8. What is a field?
+    Mechanism to specify how many character positions a data type takes when printed
+
+9. Explain what setprecision() and setw() do.
+    setw() - set field width (characters occupied) by a value
+    setprecision() - set precision (number of digits of value to show)
+
+10. What is the purpose of file open modes?
+    Specify the method of interacting with file. i.e read/write/append/binary/seek to end
+
+11. Which of the following manipulators does not “stick”: hex,
+scientific, setprecision(), showbase, setw?
+    setw()
+
+12. What is the difference between character I/O and binary I/O?
+    Character IO reads/writes file contents as character sequences
+    Binary IO reads/writes bytes directly from files
+
+13. Give an example of when it would probably be beneficial to use a
+binary file instead of a text file.
+    Image / mp3 file
+
+14. Give two examples where a stringstream can be useful.
+    Seperate processing from I/O. Make a custom string into an i/o stream
+    - Get integers from a log file
+    - Output to a GUI system
+
+15. What is a file position?
+    Bytes are numbered 0 upwards
+    Position of a byte will be its numeric index
+
+16. What happens if you position a file position beyond the end of file?
+    Undefined behaviour
+
+17. When would you prefer line-oriented input to type-specific input?
+    - read an entire line
+    - whitespace is not consistently defined to seperate values
+    - consider newline different from simple whitespace
+
+18. What does isalnum(c) do?
+    Returns if character c is alphanumeric [A-Z, a-z, 0-9]
