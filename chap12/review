@@ -1,0 +1,77 @@
+1. Why do we use graphics?
+    Useful in areas - plotting data, showing images
+    Fun - :)
+    Provide an example for reading and writing code 
+    Source of design techniques and decisions
+    Introduction to OOP
+    Key concepts are non trivial
+
+2. When do we try not to use graphics?
+    When layout can simply be expressed in plain text (markup)
+    We use graphics when we want a direct correspondance between objects in memory
+    and output on screen
+
+3. Why is graphics interesting for a programmer?
+    Endless possibilities of outputting something useful on screen
+    Output of code is immediate and obvious (mostly)
+
+4. What is a window?
+    A rectangular area which contains our programs output.
+
+5. In which namespace do we keep our graphics interface classes (our
+graphics library)?
+    Graph_lib
+
+6.  What header files do you need to do basic graphics using our graphics
+library?
+    Window.h
+    Graph.h
+
+7. What is the simplest window to use?
+    Simple_window with a next button
+
+8. What is the minimal window?
+    Window with no extra facilities built in and utilises the default OS window
+
+9. What’s a window label?
+    Title to label the window
+
+10. How do you label a window?
+    win.set_label("Label")
+
+11. How do screen coordinates work? Window coordinates?
+Mathematical coordinates?
+    Screen is a rectangular area composed of pixels, a tiny spot
+    Each pixel has an x, y coordinate
+    x => Starts with 0 [Leftmost pixed] => Increases towards right
+    y => Starts with 0 [Topmost pixel] => Increases downwards
+    Mathematic coordinates start at bottom y=0
+
+12. What are examples of simple “shapes” that we can display?
+    line lines polygon axis rectangle text image
+
+13. What command attaches a shape to a window?
+    win.attach(shape)
+
+14. Which basic shape would you use to draw a hexagon?
+    Polygon
+
+15. How do you write text somewhere in a window?
+    Text t{Point{x, y}, "Hello World"};
+    win.attach(t);
+
+16. How would you put a photo of your best friend in a window (using a
+program you wrote yourself)?
+    Image i {Point{x, y}, "friend.jpg"};
+    win.attach(i)
+
+17. You made a Window object, but nothing appears on your screen.
+What are some possible reasons for that?
+    Did not use wait_for_button to display to screen
+    Did not create window obj properly
+
+18. You have made a shape, but it doesn’t appear in the window. What are
+some possible reasons for that?
+    Did not attach
+        OR 
+    Invisible color

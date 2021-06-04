@@ -5,6 +5,10 @@
 # Book PDF
 Book.pdf
 
+#FLTK Library
+/includes/graphics/FLTK/*
+!includes/graphics/FLTK/.gitkeep
+
 # User-specific files
 *.suo
 *.user
