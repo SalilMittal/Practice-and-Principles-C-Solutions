@@ -9,6 +9,8 @@ Book.pdf
 /includes/graphics/FLTK/*
 !includes/graphics/FLTK/.gitkeep
 
+/includes/graphics/bugs.html
+
 # User-specific files
 *.suo
 *.user
