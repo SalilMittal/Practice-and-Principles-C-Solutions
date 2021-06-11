@@ -194,6 +194,14 @@ struct Rectangle : Shape {
 
     int height() const { return h; }
     int width() const { return w; }
+    // Point n() const {return Point{point(0).x, point(0).y + r};}
+    Point nw() const {return Point{point(0).x, point(0).y};}
+    Point ne() const {return Point{point(0).x + w, point(0).y};}
+    // Point s() const {return Point{point(0).x, point(0).y - r};}
+    Point se() const {return Point{point(0).x + w, point(0).y + h};}
+    Point sw() const {return Point{point(0).x, point(0).y + h};}
+    Point east() const {return Point{point(0).x, point(0).y + (h/2)};}
+    Point west() const {return Point{point(0).x, point(0).y + (h/2)};}
 private:
     int h;    // height
     int w;    // width
@@ -289,6 +297,15 @@ struct Circle : Shape {
 							  // the center
 	r=rr; 
     }
+
+    Point n() const {return Point{point(0).x, point(0).y + r};}
+    Point nw() const {return Point{point(0).x - r, point(0).y - r};}
+    Point ne() const {return Point{point(0).x + r, point(0).y - r};}
+    Point s() const {return Point{point(0).x, point(0).y - r};}
+    Point se() const {return Point{point(0).x + r, point(0).y + r};}
+    Point sw() const {return Point{point(0).x - r, point(0).y + r};}
+    Point e() const {return Point{point(0).x + r, point(0).y};}
+    Point w() const {return Point{point(0).x - r, point(0).y };}
 private:
     int r;
 };
